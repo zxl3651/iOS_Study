@@ -107,6 +107,8 @@ class ViewController: UIViewController {
         
         // 현재 스냅샷을 화면에 보여준다
         dataSource.apply(snapshot, animatingDifferences: false)
+        // animatingDifferences 옵션 존재
+        // 기본값은 true, true라면 해당하는 데이터가 변경됐을 때 애니메이션 처리가 된다.
         
         
     }
