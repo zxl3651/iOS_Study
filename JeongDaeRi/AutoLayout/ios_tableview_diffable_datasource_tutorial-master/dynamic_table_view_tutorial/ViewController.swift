@@ -82,6 +82,8 @@ class ViewController: UIViewController {
         
         print("feedArray.count : \(feedArray.count)")
         
+        // - 사이가 기존에 UITableViewDataSource를 대체한다.
+        //----------------------------------------------------------------------------------------------------
         // MARK: - 데이터 소스 설정
         // 연결할 테이블뷰, 쎌 프로바이더 = 보여줄 쎌
         dataSource = UITableViewDiffableDataSource<Section, Feed>(tableView: self.myTableView, cellProvider: { (tableView: UITableView, indexPath: IndexPath, identifier: Feed) -> UITableViewCell? in
@@ -91,6 +93,7 @@ class ViewController: UIViewController {
             
             return cell
         })
+        //----------------------------------------------------------------------------------------------------
         
         // 데이터 소스 의 현재 스냅샷을 만든다
         snapshot = NSDiffableDataSourceSnapshot<Section, Feed>()
