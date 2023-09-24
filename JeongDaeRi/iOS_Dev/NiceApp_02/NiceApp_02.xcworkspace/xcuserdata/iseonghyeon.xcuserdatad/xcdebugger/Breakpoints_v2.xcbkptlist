@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B49EDD8D-4296-49C0-B279-20BE83CA2CE6"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D3A2645-59C0-462A-9762-8B77132A7EA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NiceApp_02/ViewControllers/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "MainViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2D3A2645-59C0-462A-9762-8B77132A7EA6 - 24344d5b0187bb76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NiceApp_02.MainViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "NiceApp_02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iseonghyeon/Desktop/iOS_Study/JeongDaeRi/iOS_Dev/NiceApp_02/NiceApp_02/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "2D3A2645-59C0-462A-9762-8B77132A7EA6 - 24344d5b0187bb76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NiceApp_02.MainViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "NiceApp_02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iseonghyeon/Desktop/iOS_Study/JeongDaeRi/iOS_Dev/NiceApp_02/NiceApp_02/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "2D3A2645-59C0-462A-9762-8B77132A7EA6 - 24344d5b0187bb76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NiceApp_02.MainViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "NiceApp_02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iseonghyeon/Desktop/iOS_Study/JeongDaeRi/iOS_Dev/NiceApp_02/NiceApp_02/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA553D89-1744-4BFC-AE5A-EBA8DC730BA1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NiceApp_02/ViewControllers/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "MainViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
