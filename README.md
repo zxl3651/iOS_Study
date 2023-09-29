@@ -3,7 +3,7 @@
 
 ## JeongDaeRi 아이폰 뽀개기 학습
 
-### 1. [cocoa pod 활용_ lottie 애니메이션을 적용해보자](JeongDaeRi/iOS_Dev/NiceApp_02)
+### 1. [cocoapod 라이브러리를 활용해 lottie 애니메이션을 사용해보자](JeongDaeRi/iOS_Dev/NiceApp_02)
 ![Simulator Screen Recording - iPhone 15 Pro - 2023-09-29 at 19 51 06](https://github.com/zxl3651/iOS_Study/assets/94293365/55e99f38-ab7d-4c1f-a9d2-dd11f9a1d9af)
 
 * cocoa pod을 이용해 애니메이션 라이브러리인 lottie 애니메이션을 프로젝트에 추가해보기!
