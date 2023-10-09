@@ -30,3 +30,8 @@
 * 비동기 처리에 대해 이해하고 컴플레션 블럭을 통해 실습해보기!
 * [Awesome Swift](https://github.com/matteocrippa/awesome-swift#pagination)를 활용해 [KRProgressHUD](https://github.com/krimpedance/KRProgressHUD) 프로그래스바를 사용했다!
 * KRProgressHUD.show()를 통해 로딩중인 화면을 보여주고 비동기처리가 끝났을 때 KRProgressHUD.showSuccess()를 통해 로딩을 끝내고 Label의 text를 변경해주었다.
+
+### 6. [탭바 컨트롤러 실습](JeongDaeRi/iOS_Dev/TabBarController_Tutorial_with_storyboard_09)
+![Simulator Screen Recording - iPhone 15 Pro - 2023-10-09 at 19 37 45](https://github.com/zxl3651/iOS_Study/assets/94293365/7c5b8f22-cf08-4be0-ab49-865828e4a59a)
+
+* TabBarController를 통해 하단탭으로 화면을 옮기는 실습을 해봤다. 스토리보드를 사용해 간단하게 TabBarController를 생성 후 ViewController를 ctrl키로 연결하면 하단탭에 추가할 수 있다!
