@@ -26,7 +26,7 @@ struct ExampleView : View {
     @State private var horizontalRotation : Double = 0
     
     var body: some View {
-        VStack{
+        VStack{ //vertical Stack(수직)
             Rectangle()
                 .fill(Color.blue)
                 .frame(width: 200, height: 200)
@@ -39,7 +39,7 @@ struct ExampleView : View {
                 verticalRotation = (verticalRotation > 0 ? verticalRotation - 90 : 360)
             }, label: {Text("Reverse")})
         }
-        HStack{
+        HStack{ //horizontal Stack(수평)
             Rectangle()
                 .fill(Color.blue)
                 .frame(width: 200, height: 200)
