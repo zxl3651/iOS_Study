@@ -31,7 +31,12 @@
 * [Awesome Swift](https://github.com/matteocrippa/awesome-swift#pagination)를 활용해 [KRProgressHUD](https://github.com/krimpedance/KRProgressHUD) 프로그래스바를 사용했다!
 * KRProgressHUD.show()를 통해 로딩중인 화면을 보여주고 비동기처리가 끝났을 때 KRProgressHUD.showSuccess()를 통해 로딩을 끝내고 Label의 text를 변경해주었다.
 
-### 6. [탭바 컨트롤러 실습](JeongDaeRi/iOS_Dev/TabBarController_Tutorial_with_storyboard_09)
+### 6 - 1. [탭바 컨트롤러 - Storyboard를 통한 실습](JeongDaeRi/iOS_Dev/TabBarController_Tutorial_with_storyboard_09)
 ![Simulator Screen Recording - iPhone 15 Pro - 2023-10-09 at 19 37 45](https://github.com/zxl3651/iOS_Study/assets/94293365/7c5b8f22-cf08-4be0-ab49-865828e4a59a)
 
 * TabBarController를 통해 하단탭으로 화면을 옮기는 실습을 해봤다. 스토리보드를 사용해 간단하게 TabBarController를 생성 후 ViewController를 ctrl키로 연결하면 하단탭에 추가할 수 있다!
+
+### 6 - 2. [탭바 컨트롤러 - Storyboard가 아닌 Code를 통한 실습](JeongDaeRi/iOS_Dev/TabBarController_No_storyboard_10)
+![Simulator Screen Recording - iPhone 15 Pro - 2023-10-09 at 20 25 04](https://github.com/zxl3651/iOS_Study/assets/94293365/0b27111c-2926-426d-891f-0c763a7bacc1)
+
+* SceneDelegate의 scene 함수 수정을 통해 코드로 WindowScene을 설정했다. 각 NavigationController를 init 함수로 생성해주고, 각 controller에 Item 설정을 통해 tabBarItem을 설정해서 하단탭에 추가할 수 있다!
