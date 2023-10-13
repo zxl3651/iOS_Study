@@ -3,7 +3,7 @@
 <details>
   <summary>
     
-  ## JeongDaeRi 아이폰 뽀개기 Study
+  ## JeongDaeRi 아이폰 뽀개기 Study (UIKit)
   
   </summary>
     
@@ -50,7 +50,7 @@
 <details>
   <summary>
 
-## 핵심만 골라 배우는 SwiftUI 기반의 iOS 프로그래밍 교재 Study
+## 핵심만 골라 배우는 SwiftUI 기반의 iOS 프로그래밍 교재 Study (SwiftUI)
     
   </summary>
 
