@@ -1,8 +1,12 @@
-# iOS_Study
+# iOS_Study(각 토글을 통해 학습한 내용을 정리!)
 
-
-## JeongDaeRi 아이폰 뽀개기 학습
-
+<details>
+  <summary>
+    
+  ## JeongDaeRi 아이폰 뽀개기 Study
+  
+  </summary>
+    
 ### 1. [cocoapod 라이브러리를 활용해 lottie 애니메이션을 사용 실습](JeongDaeRi/iOS_Dev/NiceApp_02)
 ![Simulator Screen Recording - iPhone 15 Pro - 2023-09-29 at 19 51 06](https://github.com/zxl3651/iOS_Study/assets/94293365/55e99f38-ab7d-4c1f-a9d2-dd11f9a1d9af)
 
@@ -40,3 +44,22 @@
 ![Simulator Screen Recording - iPhone 15 Pro - 2023-10-09 at 20 25 04](https://github.com/zxl3651/iOS_Study/assets/94293365/0b27111c-2926-426d-891f-0c763a7bacc1)
 
 * SceneDelegate의 scene 함수 수정을 통해 코드로 WindowScene을 설정했다. 각 NavigationController를 init 함수로 생성해주고, 각 controller에 Item 설정을 통해 tabBarItem을 설정해서 하단탭에 추가할 수 있다!
+
+</details>
+
+<details>
+  <summary>
+
+## 핵심만 골라 배우는 SwiftUI 기반의 iOS 프로그래밍 교재 Study
+    
+  </summary>
+
+### 1. [23장 SwiftUI 예제 튜토리얼](LikeLion/10.13(금)/SwiftUIDemo)
+
+![Simulator Screen Recording - iPhone 15 Pro - 2023-10-13 at 18 02 16](https://github.com/zxl3651/iOS_Study/assets/94293365/15509dc2-4709-48dd-86a9-ac560a2c6420)
+
+* 기본적인 SwiftUI 에서의 뷰, 수정자, 상태 변수, 몇 가지 기본적인 애니메이션 기술을 사용하여 상호작용하는 간단한 인터페이스 설계해보기!
+* 레이아웃에 뷰들을 추가하는 다양한 방법, 상태 프로퍼티 바인딩과 수정자 사용, Spacer 및 Divider를 사용해 구성했다.
+
+  
+</details>
