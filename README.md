@@ -64,6 +64,7 @@
     
   </summary>
 
+
 ### 1. [23장 SwiftUI 예제 튜토리얼](LikeLion/10.13(금)/SwiftUIDemo)
 
 ![Simulator Screen Recording - iPhone 15 Pro - 2023-10-13 at 18 02 16](https://github.com/zxl3651/iOS_Study/assets/94293365/15509dc2-4709-48dd-86a9-ac560a2c6420)
@@ -71,5 +72,4 @@
 * 기본적인 SwiftUI 에서의 뷰, 수정자, 상태 변수, 몇 가지 기본적인 애니메이션 기술을 사용하여 상호작용하는 간단한 인터페이스 설계해보기!
 * 레이아웃에 뷰들을 추가하는 다양한 방법, 상태 프로퍼티 바인딩과 수정자 사용, Spacer 및 Divider를 사용해 구성했다.
 
-  
 </details>
