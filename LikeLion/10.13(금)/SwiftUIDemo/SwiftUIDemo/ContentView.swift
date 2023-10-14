@@ -33,7 +33,7 @@ struct ContentView: View {
             Slider(value: $rotation, in:0...360, step: 0.1)
                 .padding()
             
-            TextField("Enter text here", text: $text)
+            TextField("Enter text here", text: $text) 
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
