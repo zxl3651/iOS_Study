@@ -50,6 +50,16 @@
 <details>
   <summary>
 
+## JeongDaeRi 스위프트UI 뽀개기 Study (SwiftUI)
+    
+  </summary>
+</details>
+
+
+<details>
+  
+  <summary>
+
 ## 핵심만 골라 배우는 SwiftUI 기반의 iOS 프로그래밍 교재 Study (SwiftUI)
     
   </summary>
