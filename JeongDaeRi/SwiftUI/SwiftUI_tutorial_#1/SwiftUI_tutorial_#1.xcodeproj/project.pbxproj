@@ -12,6 +12,7 @@
 		7169C6F72ADAA7D300A2DFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7169C6F62ADAA7D300A2DFB3 /* Assets.xcassets */; };
 		7169C6FA2ADAA7D300A2DFB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7169C6F92ADAA7D300A2DFB3 /* Preview Assets.xcassets */; };
 		7169C7012ADAAE6500A2DFB3 /* VstackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169C7002ADAAE6500A2DFB3 /* VstackView.swift */; };
+		7169C7032ADAB2E500A2DFB3 /* MyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169C7022ADAB2E500A2DFB3 /* MyTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7169C6F62ADAA7D300A2DFB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7169C6F92ADAA7D300A2DFB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7169C7002ADAAE6500A2DFB3 /* VstackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VstackView.swift; sourceTree = "<group>"; };
+		7169C7022ADAB2E500A2DFB3 /* MyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				7169C6F22ADAA7D200A2DFB3 /* SwiftUI_tutorial__1App.swift */,
 				7169C6F42ADAA7D200A2DFB3 /* ContentView.swift */,
 				7169C7002ADAAE6500A2DFB3 /* VstackView.swift */,
+				7169C7022ADAB2E500A2DFB3 /* MyTextView.swift */,
 				7169C6F62ADAA7D300A2DFB3 /* Assets.xcassets */,
 				7169C6F82ADAA7D300A2DFB3 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7169C7012ADAAE6500A2DFB3 /* VstackView.swift in Sources */,
+				7169C7032ADAB2E500A2DFB3 /* MyTextView.swift in Sources */,
 				7169C6F52ADAA7D200A2DFB3 /* ContentView.swift in Sources */,
 				7169C6F32ADAA7D200A2DFB3 /* SwiftUI_tutorial__1App.swift in Sources */,
 			);
