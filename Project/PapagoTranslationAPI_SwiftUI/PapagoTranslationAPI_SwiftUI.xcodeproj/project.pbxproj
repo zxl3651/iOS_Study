@@ -11,7 +11,7 @@
 		71B65C5F2ADFA2DA005DBA92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B65C5E2ADFA2DA005DBA92 /* ContentView.swift */; };
 		71B65C612ADFA2DB005DBA92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B65C602ADFA2DB005DBA92 /* Assets.xcassets */; };
 		71B65C642ADFA2DB005DBA92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B65C632ADFA2DB005DBA92 /* Preview Assets.xcassets */; };
-		71B65C6B2AE028F7005DBA92 /* TranslateInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71B65C6A2AE028F7005DBA92 /* TranslateInfo.plist */; };
+		71F4CCC72AE13E8C00E0C8A1 /* TranslateInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71F4CCC62AE13E8C00E0C8A1 /* TranslateInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		71B65C5E2ADFA2DA005DBA92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		71B65C602ADFA2DB005DBA92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71B65C632ADFA2DB005DBA92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		71B65C6A2AE028F7005DBA92 /* TranslateInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TranslateInfo.plist; sourceTree = "<group>"; };
+		71F4CCC62AE13E8C00E0C8A1 /* TranslateInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TranslateInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 		71B65C502ADFA2DA005DBA92 = {
 			isa = PBXGroup;
 			children = (
-				71B65C6A2AE028F7005DBA92 /* TranslateInfo.plist */,
+				71F4CCC62AE13E8C00E0C8A1 /* TranslateInfo.plist */,
 				71B65C5B2ADFA2DA005DBA92 /* PapagoTranslationAPI_SwiftUI */,
 				71B65C5A2ADFA2DA005DBA92 /* Products */,
 			);
@@ -129,7 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71B65C642ADFA2DB005DBA92 /* Preview Assets.xcassets in Resources */,
-				71B65C6B2AE028F7005DBA92 /* TranslateInfo.plist in Resources */,
+				71F4CCC72AE13E8C00E0C8A1 /* TranslateInfo.plist in Resources */,
 				71B65C612ADFA2DB005DBA92 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

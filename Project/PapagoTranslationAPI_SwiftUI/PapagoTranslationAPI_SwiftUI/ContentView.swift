@@ -12,7 +12,7 @@ extension Bundle {
     var Client_ID : String? {
         guard let file = self.path(forResource: "TranslateInfo", ofType: "plist"),
               let resource = NSDictionary(contentsOfFile: file),
-              let key = resource["Client_key"] as? String else {
+              let key = resource["Client_id"] as? String else {
             print("에러 발생")
             return nil
         }
@@ -35,14 +35,16 @@ struct ContentView: View {
     @State private var targetLanguage = "en"
     @State private var translatedText : String?
     @State private var isLoading = false
-    private var CLIENT_ID = ""
-    private var CLIENT_SECRET = ""
+    private var CLIENT_ID = Bundle.main.Client_ID!
+    private var CLIENT_SECRET = Bundle.main.Client_SECRET!
+    
     
     var body: some View {
         
         NavigationView{
             
             VStack{
+                
                 
                 TextField("번역할 텍스트 입력", text: $inputText)
                     .textFieldStyle(.roundedBorder)
@@ -53,6 +55,7 @@ struct ContentView: View {
                     Text("프랑스어").tag("fr")
                 }) // Picker
                 .pickerStyle(SegmentedPickerStyle())
+                .padding()
                 
                 Button("번역하기"){
                     translate()
