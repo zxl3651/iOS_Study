@@ -9,42 +9,32 @@ import SwiftUI
 
 struct Example_03: View {
     var body: some View {
-        GeometryReader{ geometry in
-            VStack{
-                Button(action: {}, label: {
-                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                        .foregroundColor(.white)
-                        .frame(width: geometry.size.width)
-                        .padding(5)
-                        .background(Color.indigo)
-                        .cornerRadius(5)
-                })
-                
-                Spacer()
-                
-                Button(action: {}, label: {
-                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                        .foregroundColor(.white)
-                        .frame(width: geometry.size.width, height: geometry.size.height / 4 * 3)
-                        .padding(5)
-                        .background(Color.indigo)
-                        .cornerRadius(5)
-                })
-                
-                Spacer()
-                
-                Button(action: {}, label: {
-                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                        .foregroundColor(.white)
-                        .frame(width: geometry.size.width)
-                        .padding(5)
-                        .background(Color.indigo)
-                        .cornerRadius(5)
-                })
+        Button(action: {
+            // 동기 함수에서 비동기 함수 호출
+            Task {
+                await doSomething()
             }
-            .frame(maxWidth: .infinity)
-        }
+        }, label: {
+            Text("Do Something")
+        })
+    }
+    
+    func doSomething() async {
+        // async let을 사용하여 두 개의 비동기 작업을 동시에 실행
+        print("start \(Date())")
+        async let result = takeTooLong()
         
+        // takeTooLong() 함수의 리턴값이 오지 않았지만 실행 가능
+        print("After async-let \(Date())")
+        
+        // async 상수 result에 값이 올때까지 여기서 실행이 멈춤
+        print("result = \(await result)")
+        print("end \(Date())")
+    }
+    
+    func takeTooLong() async -> Date {
+        sleep(5)
+        return Date()
     }
 }
 
