@@ -29,12 +29,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // 예제 1번
+//        self.view.addSubview(A_label)
+//        self.view.addSubview(B_label)
+//        
+//        A_label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//        A_label.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+//        B_label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//        B_label.leadingAnchor.constraint(equalTo: A_label.trailingAnchor, constant: 20).isActive = true
+        
+        // 예제 2번
         self.view.addSubview(A_label)
         self.view.addSubview(B_label)
         
-        A_label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        A_label.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
-        B_label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        A_label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        A_label.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
+        B_label.topAnchor.constraint(equalTo: A_label.topAnchor).isActive = true
         B_label.leadingAnchor.constraint(equalTo: A_label.trailingAnchor, constant: 20).isActive = true
         
     }
