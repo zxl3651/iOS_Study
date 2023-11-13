@@ -9,20 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    lazy var A_label : UILabel = {
-       let label = UILabel()
-        label.text = "AutoLayout..."
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    lazy var A_label : UILabel = {
+//       let label = UILabel()
+//        label.text = "AutoLayout..."
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
     
-    lazy var A_Image : UIImageView = {
-        let img = UIImageView()
-        img.image = UIImage(systemName: "circle")
-        img.contentMode = .scaleAspectFit
-        img.translatesAutoresizingMaskIntoConstraints = false
-        return img
-    }()
+//    lazy var A_Image : UIImageView = {
+//        let img = UIImageView()
+//        img.image = UIImage(systemName: "circle")
+//        img.contentMode = .scaleAspectFit
+//        img.translatesAutoresizingMaskIntoConstraints = false
+//        return img
+//    }()
     
 //    lazy var B_label : UILabel = {
 //       let label = UILabel()
@@ -30,6 +30,15 @@ class ViewController: UIViewController {
 //        label.translatesAutoresizingMaskIntoConstraints = false
 //        return label
 //    }()
+    
+    lazy var myButton : UIButton = {
+        let btn = UIButton(type: .system)
+        btn.backgroundColor = UIColor.blue
+        btn.setTitle("Tab Me", for: .normal)
+        btn.setTitleColor(UIColor.white, for: .normal)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
     
     
     override func viewDidLoad() {
@@ -55,16 +64,24 @@ class ViewController: UIViewController {
 //        B_label.leadingAnchor.constraint(equalTo: A_label.trailingAnchor, constant: 20).isActive = true
         
         // 예제 3번
-        self.view.addSubview(A_Image)
-        self.view.addSubview(A_label)
+//        self.view.addSubview(A_Image)
+//        self.view.addSubview(A_label)
+//        
+//        A_Image.widthAnchor.constraint(equalToConstant: 100).isActive = true
+//        A_Image.heightAnchor.constraint(equalToConstant: 100).isActive = true
+//        A_Image.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        A_Image.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 50).isActive = true
+//        
+//        A_label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        A_label.topAnchor.constraint(equalTo: A_Image.bottomAnchor, constant: 10).isActive = true
         
-        A_Image.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        A_Image.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        A_Image.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        A_Image.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 50).isActive = true
+        // 예제 4번
+        self.view.addSubview(myButton)
         
-        A_label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        A_label.topAnchor.constraint(equalTo: A_Image.bottomAnchor, constant: 10).isActive = true
+        myButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50).isActive = true
+        myButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+        myButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+        
         
         
     }
