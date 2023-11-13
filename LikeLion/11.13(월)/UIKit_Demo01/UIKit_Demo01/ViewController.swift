@@ -31,13 +31,27 @@ class ViewController: UIViewController {
 //        return label
 //    }()
     
-    lazy var myButton : UIButton = {
-        let btn = UIButton(type: .system)
-        btn.backgroundColor = UIColor.blue
-        btn.setTitle("Tab Me", for: .normal)
-        btn.setTitleColor(UIColor.white, for: .normal)
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        return btn
+//    lazy var myButton : UIButton = {
+//        let btn = UIButton(type: .system)
+//        btn.backgroundColor = UIColor.blue
+//        btn.setTitle("Tab Me", for: .normal)
+//        btn.setTitleColor(UIColor.white, for: .normal)
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        return btn
+//    }()
+    
+    lazy var redBox : UIView = {
+       let view = UIView()
+        view.backgroundColor = UIColor.red
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    lazy var greenBox : UIView = {
+       let view = UIView()
+        view.backgroundColor = UIColor.green
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     
@@ -76,13 +90,21 @@ class ViewController: UIViewController {
 //        A_label.topAnchor.constraint(equalTo: A_Image.bottomAnchor, constant: 10).isActive = true
         
         // 예제 4번
-        self.view.addSubview(myButton)
+//        self.view.addSubview(myButton)
+//        
+//        myButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50).isActive = true
+//        myButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+//        myButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
         
-        myButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50).isActive = true
-        myButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
-        myButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+        // 예제 5번
+        self.view.addSubview(redBox)
+        self.view.addSubview(greenBox)
         
-        
+        redBox.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.3).isActive = true
+        redBox.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5).isActive = true
+        greenBox.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.3).isActive = true
+        greenBox.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5).isActive = true
+        greenBox.leadingAnchor.constraint(equalTo: redBox.trailingAnchor).isActive = true
         
     }
 
