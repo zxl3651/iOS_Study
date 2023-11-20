@@ -13,6 +13,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let swiftUIController = UIHostingController(rootView: SwiftUIView(text: "Integration Three"))
+        
+        addChild(swiftUIController)
+        swiftUIController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(swiftUIController.view)
+        
+        swiftUIController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        swiftUIController.view.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        swiftUIController.didMove(toParent: self)
     }
 
 
