@@ -24,19 +24,29 @@
                                     <segue destination="GNG-R6-DUp" kind="show" destinationCreationSelector="showSwiftUIView:" id="v6C-qo-kBD"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yX0-PN-3VH">
+                                <rect key="frame" x="16" y="171" width="361" height="128"/>
+                                <connections>
+                                    <segue destination="fBC-lR-FnU" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="k2F-sU-4jC"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yX0-PN-3VH" firstAttribute="top" secondItem="kpa-Td-CIS" secondAttribute="bottom" constant="33" id="49Q-Vg-Rv9"/>
                             <constraint firstItem="kpa-Td-CIS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PMA-tZ-2Kq"/>
                             <constraint firstItem="kpa-Td-CIS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WlJ-Pc-blK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yX0-PN-3VH" secondAttribute="bottom" constant="519" id="YlV-v0-qzr"/>
+                            <constraint firstItem="yX0-PN-3VH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gUO-rg-wwv"/>
+                            <constraint firstItem="yX0-PN-3VH" firstAttribute="centerX" secondItem="kpa-Td-CIS" secondAttribute="centerX" id="z9b-xz-XoR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pxl-Za-RZa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="1054.1984732824426" y="-6.3380281690140849"/>
         </scene>
         <!--Hosting Controller-->
         <scene sceneID="2zh-zP-P6S">
@@ -65,6 +75,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2d-77-AuG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-6.3380281690140849"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="aJt-Hy-HnK">
+            <objects>
+                <hostingController id="fBC-lR-FnU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9if-X9-65T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="-435"/>
         </scene>
     </scenes>
     <resources>
