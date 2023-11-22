@@ -82,6 +82,7 @@ class ViewController: UIViewController {
         if name.text != ""{
             sqlStr("name", name)
             printModel(stores)
+            
         }
         
         else if address.text != "" {
@@ -93,9 +94,13 @@ class ViewController: UIViewController {
             sqlStr("phone", phone)
             printModel(stores)
         }
+        stores = []
     }
     
     func sqlStr(_ str: String, _ find: UITextField) {
+        findName.text = ""
+        findAddress.text = ""
+        findPhone.text = ""
         let contactDB = FMDatabase(path: databasePath)
         
         if contactDB.open(){
@@ -121,9 +126,6 @@ class ViewController: UIViewController {
     }
     
     func printModel(_ items: [Contact]) {
-        findName.text = ""
-        findAddress.text = ""
-        findPhone.text = ""
         
         findName.text = "\(items[0].name ?? "")"
         for item in items {
