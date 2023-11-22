@@ -12,10 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var phone: UITextField!
-    
     @IBOutlet weak var status: UILabel!
     
+    @IBOutlet weak var findName: UILabel!
+    @IBOutlet weak var findAddress: UILabel!
+    @IBOutlet weak var findPhone: UILabel!
+    
+    
     var databasePath = ""
+    var stores : [Contact] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,50 +54,87 @@ class ViewController: UIViewController {
 
     @IBAction func saveContact(_ sender: Any) {
         let contactDB = FMDatabase(path: databasePath)
-        
-        if contactDB.open() {
-            let sql = "insert into contacts (name, address, phone) values ('\(name.text ?? "")', '\(address.text ?? "")', '\(phone.text ?? "")')"
             
-            do {
-                try contactDB.executeUpdate(sql, values: nil)
-            } catch {
-                status.text = "contact 추가 실패!!"
+            if contactDB.open() {
+                let sql = "insert into contacts (name, address, phone) values ('\(name.text ?? "")', '\(address.text ?? "")', '\(phone.text ?? "")')"
+                
+                do {
+                    try contactDB.executeUpdate(sql, values: nil)
+                } catch {
+                    status.text = "contact 추가 실패!!"
+                }
+                
+                status.text = "Contact Added"
+                name.text = ""
+                address.text = ""
+                phone.text = ""
+                
+                contactDB.close()
+            } else {
+                status.text = "DB 열기 오류 발생"
+                print("Error: \(contactDB.lastErrorMessage())")
             }
-            
-            status.text = "Contact Added"
-            name.text = ""
-            address.text = ""
-            phone.text = ""
-            
-            contactDB.close()
-        } else {
-            status.text = "DB 열기 오류 발생"
-            print("Error: \(contactDB.lastErrorMessage())")
-        }
     }
     
     @IBAction func findContact(_ sender: Any) {
+        
+        
+        if name.text != ""{
+            sqlStr("name", name)
+            printModel(stores)
+        }
+        
+        else if address.text != "" {
+            sqlStr("address", address)
+            printModel(stores)
+        }
+        
+        else if phone.text != "" {
+            sqlStr("phone", phone)
+            printModel(stores)
+        }
+    }
+    
+    func sqlStr(_ str: String, _ find: UITextField) {
         let contactDB = FMDatabase(path: databasePath)
         
         if contactDB.open(){
-            let sql = "select address, phone from contacts where name='\(name.text ?? "")'"
+            
+            let sql = "select name, address, phone from contacts where \(str) = '\(find.text ?? "")'"
             
             do {
                 let results : FMResultSet? = try contactDB.executeQuery(sql, values: nil)
-                
-                if results?.next() == true {
-                    address.text = results?.string(forColumn: "address")
-                    phone.text = results?.string(forColumn: "phone")
+                while results?.next() == true {
+                    let name = results?.string(forColumn: "name")
+                    let address = results?.string(forColumn: "address")
+                    let phone = results?.string(forColumn: "phone")
+                    stores.append(Contact(name: name, address: address, phone: phone))
+                    
                     status.text = "Record Found"
-                } else {
-                    status.text = "Recond Not Found"
-                    address.text = ""
-                    phone.text = ""
                 }
             } catch {
                 print("Error: \(contactDB.lastErrorMessage())")
             }
+                
+            contactDB.close()
+        }
+    }
+    
+    func printModel(_ items: [Contact]) {
+        findName.text = ""
+        findAddress.text = ""
+        findPhone.text = ""
+        
+        findName.text = "\(items[0].name ?? "")"
+        for item in items {
+            findAddress.text! += "\(item.address ?? "")\n"
+            findPhone.text! += "\(item.phone ?? "")\n"
         }
     }
 }
 
+struct Contact {
+    let name : String?
+    let address : String?
+    let phone : String?
+}
