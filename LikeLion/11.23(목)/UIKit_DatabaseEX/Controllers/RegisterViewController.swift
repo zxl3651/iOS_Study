@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     var manageObjectContext : NSManagedObjectContext?
+    var errormessage : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,5 +45,51 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerBtnClicked(_ sender: Any) {
         print("RegisterViewController - registerBtnClicked () 실행")
+        
+        if let context = manageObjectContext, let entityDescription = NSEntityDescription.entity(forEntityName: "LoginDatas", in: context) {
+            
+            
+            // 만약 이메일이 존재한다면 => 회원가입 실패 및 기존 아이디로 로그인하라고 알람
+            let request : NSFetchRequest<LoginDatas> = LoginDatas.fetchRequest()
+            request.entity = entityDescription
+            if let email = email.text {
+                request.predicate = NSPredicate(format: "(email = %@)", email)
+            }
+            do {
+                let results = try context.fetch(request as! NSFetchRequest<NSFetchRequestResult>)
+                
+                if results.count > 0 {
+                    let match = results[0] as! NSManagedObject
+                    
+                    let email = match.value(forKey: "email") as? String
+                    
+                    if email == self.email.text {
+                        print("기존에 회원가입 기록이 있습니다.")
+                        
+                    }
+                } else { // 해당 이메일로 된 아이디 값이 없다는 뜻
+                    let contact = LoginDatas(entity: entityDescription, insertInto: manageObjectContext)
+                    
+                    contact.email = email.text
+                    contact.nickname = nickname.text
+                    contact.password = password.text
+                    
+                    do {
+                        try manageObjectContext?.save()
+                        
+                        email.text = ""
+                        nickname.text = ""
+                        password.text = ""
+                        
+                        self.navigationController?.popViewController(animated: true)
+                        
+                    } catch let error {
+                        fatalError("error : \(error)")
+                    }
+                }
+            } catch {
+                fatalError("error : \(error)")
+            }
+        }
     }
 }

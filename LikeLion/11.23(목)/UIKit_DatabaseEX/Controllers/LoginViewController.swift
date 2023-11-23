@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
 
     func initCoreDatabase() {
         let container = NSPersistentContainer(name: "UIKit_DatabaseEX")
-        container.loadPersistentStores { description, error in
+        container.loadPersistentStores { (description, error) in
             if let error = error {
                 fatalError("데이터베이스 초기화 실패")
             } else {
@@ -36,6 +36,37 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginBtnClicked(_ sender: Any) {
         print("LoginViewController - loginBtnClicked() called")
+        
+        if let context = self.manageObjectContext, let entityDescription = NSEntityDescription.entity(forEntityName: "LoginDatas", in: context) {
+            let request : NSFetchRequest<LoginDatas> = LoginDatas.fetchRequest()
+            request.entity = entityDescription
+            
+            if let email = email.text {
+                request.predicate = NSPredicate(format: "(email = %@)", email)
+            }
+            do {
+                let results = try context.fetch(request as! NSFetchRequest<NSFetchRequestResult>)
+                
+                if results.count > 0 {
+                    let match = results[0] as! NSManagedObject
+                    
+                    let email = match.value(forKey: "email") as? String
+                    let password = match.value(forKey: "password") as? String
+                    
+                    if email == self.email.text && password == self.password.text {
+                        print("로그인 성공")
+                        // 로그인 성공 시 화면 이동
+                        
+                    } else {
+                        print("로그인 실패")
+                    }
+                } else { // 해당 이메일로 된 아이디 값이 없다는 뜻
+                    print("로그인 정보가 없습니다.")
+                }
+            } catch {
+                fatalError("error : \(error)")
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
