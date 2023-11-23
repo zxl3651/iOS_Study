@@ -15,6 +15,8 @@
 		7185BF8C2B0F0AA000297230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7185BF8B2B0F0AA000297230 /* Assets.xcassets */; };
 		7185BF8F2B0F0AA000297230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7185BF8D2B0F0AA000297230 /* LaunchScreen.storyboard */; };
 		7185BF982B0F0B3200297230 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185BF972B0F0B3200297230 /* RegisterViewController.swift */; };
+		7185BF9A2B0F2D7A00297230 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185BF992B0F2D7A00297230 /* DetailViewController.swift */; };
+		7185BF9E2B0F3C0100297230 /* CoreDataKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185BF9D2B0F3C0100297230 /* CoreDataKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		7185BF8E2B0F0AA000297230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7185BF902B0F0AA000297230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7185BF972B0F0B3200297230 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7185BF992B0F2D7A00297230 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7185BF9D2B0F3C0100297230 /* CoreDataKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 		7185BF732B0F0A9F00297230 = {
 			isa = PBXGroup;
 			children = (
+				7185BF9F2B0F3C1B00297230 /* Enums */,
 				7185BF962B0F0B0000297230 /* Controllers */,
 				7185BF7E2B0F0A9F00297230 /* UIKit_DatabaseEX */,
 				7185BF7D2B0F0A9F00297230 /* Products */,
@@ -76,9 +81,18 @@
 			isa = PBXGroup;
 			children = (
 				7185BF832B0F0A9F00297230 /* LoginViewController.swift */,
+				7185BF992B0F2D7A00297230 /* DetailViewController.swift */,
 				7185BF972B0F0B3200297230 /* RegisterViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7185BF9F2B0F3C1B00297230 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				7185BF9D2B0F3C0100297230 /* CoreDataKey.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +169,10 @@
 				7185BF8A2B0F0A9F00297230 /* UIKit_DatabaseEX.xcdatamodeld in Sources */,
 				7185BF982B0F0B3200297230 /* RegisterViewController.swift in Sources */,
 				7185BF842B0F0A9F00297230 /* LoginViewController.swift in Sources */,
+				7185BF9A2B0F2D7A00297230 /* DetailViewController.swift in Sources */,
 				7185BF802B0F0A9F00297230 /* AppDelegate.swift in Sources */,
 				7185BF822B0F0A9F00297230 /* SceneDelegate.swift in Sources */,
+				7185BF9E2B0F3C0100297230 /* CoreDataKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,100 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="oTy-do-37E">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="YFX-fV-Kl3" customClass="DetailViewController" customModule="UIKit_DatabaseEX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IET-ow-KLG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1e-oS-neq">
+                                <rect key="frame" x="16" y="75" width="99" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wfH-TF-rhG">
+                                <rect key="frame" x="96.666666666666686" y="138" width="200" height="198.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="w1N-QQ-3dg"/>
+                                    <constraint firstAttribute="height" constant="200" id="zlF-AW-vnE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eet-NI-SIK">
+                                <rect key="frame" x="40" y="387" width="73" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmJ-Np-NWO">
+                                <rect key="frame" x="40" y="451" width="73" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apq-ou-79u">
+                                <rect key="frame" x="153" y="387" width="200" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Ead-Em-MYM"/>
+                                    <constraint firstAttribute="width" constant="200" id="u2R-b6-UEL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlC-aj-9qs">
+                                <rect key="frame" x="153" y="451" width="200" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="KDC-aB-1VG"/>
+                                    <constraint firstAttribute="width" constant="200" id="ehg-Mz-9DG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-bp-LC6">
+                                <rect key="frame" x="140.33333333333334" y="633" width="112.33333333333334" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그아웃하기">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutBtnClicked:" destination="YFX-fV-Kl3" eventType="touchUpInside" id="qum-Df-Ocn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i23-Ge-9k8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DlC-aj-9qs" firstAttribute="leading" secondItem="xmJ-Np-NWO" secondAttribute="trailing" constant="40" id="4oH-0S-Msh"/>
+                            <constraint firstItem="xmJ-Np-NWO" firstAttribute="top" secondItem="eet-NI-SIK" secondAttribute="bottom" constant="40" id="BcP-3c-gOC"/>
+                            <constraint firstItem="eet-NI-SIK" firstAttribute="leading" secondItem="i23-Ge-9k8" secondAttribute="leading" constant="40" id="DkH-hD-1ec"/>
+                            <constraint firstItem="apq-ou-79u" firstAttribute="leading" secondItem="eet-NI-SIK" secondAttribute="trailing" constant="40" id="GsH-8Y-7xf"/>
+                            <constraint firstItem="i23-Ge-9k8" firstAttribute="bottom" secondItem="Cab-bp-LC6" secondAttribute="bottom" constant="150" id="Hoe-NX-rOW"/>
+                            <constraint firstItem="wfH-TF-rhG" firstAttribute="top" secondItem="S1e-oS-neq" secondAttribute="bottom" constant="20" id="JDO-XE-UmA"/>
+                            <constraint firstItem="S1e-oS-neq" firstAttribute="leading" secondItem="i23-Ge-9k8" secondAttribute="leading" constant="16" id="Prr-Ku-tHr"/>
+                            <constraint firstItem="S1e-oS-neq" firstAttribute="top" secondItem="i23-Ge-9k8" secondAttribute="top" constant="16" id="S6d-bQ-sOm"/>
+                            <constraint firstItem="i23-Ge-9k8" firstAttribute="trailing" secondItem="apq-ou-79u" secondAttribute="trailing" constant="40" id="YCR-H4-UFu"/>
+                            <constraint firstItem="wfH-TF-rhG" firstAttribute="centerX" secondItem="IET-ow-KLG" secondAttribute="centerX" id="cWO-41-TZj"/>
+                            <constraint firstItem="i23-Ge-9k8" firstAttribute="trailing" secondItem="DlC-aj-9qs" secondAttribute="trailing" constant="40" id="ecI-VW-3Fk"/>
+                            <constraint firstItem="apq-ou-79u" firstAttribute="firstBaseline" secondItem="eet-NI-SIK" secondAttribute="firstBaseline" id="hJQ-j9-ils"/>
+                            <constraint firstItem="eet-NI-SIK" firstAttribute="top" secondItem="wfH-TF-rhG" secondAttribute="bottom" constant="50" id="iUg-yi-eds"/>
+                            <constraint firstItem="DlC-aj-9qs" firstAttribute="firstBaseline" secondItem="xmJ-Np-NWO" secondAttribute="firstBaseline" id="jy6-jA-thv"/>
+                            <constraint firstItem="xmJ-Np-NWO" firstAttribute="leading" secondItem="eet-NI-SIK" secondAttribute="leading" id="rlF-Pp-Xww"/>
+                            <constraint firstItem="Cab-bp-LC6" firstAttribute="centerX" secondItem="IET-ow-KLG" secondAttribute="centerX" id="xe4-em-rzJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="apq-ou-79u" id="Zeu-r7-qr8"/>
+                        <outlet property="nickname" destination="DlC-aj-9qs" id="3BO-Ri-HVo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isD-l2-QNM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="-687.32394366197184"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -176,8 +270,12 @@
     </scenes>
     <resources>
         <image name="Swift_img" width="600" height="600"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

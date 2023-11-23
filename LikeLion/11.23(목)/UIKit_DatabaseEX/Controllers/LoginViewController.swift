@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 
+
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var email: UITextField!
@@ -23,7 +25,7 @@ class LoginViewController: UIViewController {
     }
 
     func initCoreDatabase() {
-        let container = NSPersistentContainer(name: "UIKit_DatabaseEX")
+        let container = NSPersistentContainer(name: CoreDataKey.coreDataName.rawValue)
         container.loadPersistentStores { (description, error) in
             if let error = error {
                 fatalError("데이터베이스 초기화 실패")
@@ -37,7 +39,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginBtnClicked(_ sender: Any) {
         print("LoginViewController - loginBtnClicked() called")
         
-        if let context = self.manageObjectContext, let entityDescription = NSEntityDescription.entity(forEntityName: "LoginDatas", in: context) {
+        if let context = self.manageObjectContext, let entityDescription = NSEntityDescription.entity(forEntityName: CoreDataKey.entityName.rawValue, in: context) {
             let request : NSFetchRequest<LoginDatas> = LoginDatas.fetchRequest()
             request.entity = entityDescription
             
@@ -56,6 +58,15 @@ class LoginViewController: UIViewController {
                     if email == self.email.text && password == self.password.text {
                         print("로그인 성공")
                         // 로그인 성공 시 화면 이동
+                        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+                        vc.manageObjectContext = self.manageObjectContext
+                        vc.key = email ?? ""
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        
+//                        let vc = DetailViewController()
+//                        vc.manageObjectContext = manageObjectContext
+//                        self.navigationController?.pushViewController(vc, animated: true)
+                        
                         
                     } else {
                         print("로그인 실패")

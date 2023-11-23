@@ -15,7 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     var manageObjectContext : NSManagedObjectContext?
-    var errormessage : String = ""
+    var showmessage : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +64,8 @@ class RegisterViewController: UIViewController {
                     let email = match.value(forKey: "email") as? String
                     
                     if email == self.email.text {
-                        print("기존에 회원가입 기록이 있습니다.")
+                        showmessage = "기존에 회원가입 기록이 있습니다."
+                        showAlert(showmessage)
                         
                     }
                 } else { // 해당 이메일로 된 아이디 값이 없다는 뜻
@@ -92,4 +93,14 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+    
+    func showAlert(_ message: String) {
+        let alert = UIAlertController(title: "알림", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        alert.addAction(UIAlertAction(title: "취소", style: .destructive))
+        
+        present(alert, animated: true)
+    }
+    
+    
 }
