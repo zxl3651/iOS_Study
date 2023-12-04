@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sGx-ac-nnu">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KakaoLoginAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-Lr-c0I">
+                                <rect key="frame" x="140" y="408.66666666666669" width="113" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="KakaoLogin"/>
+                                <connections>
+                                    <action selector="kakaoLoginBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfh-V8-8Al"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fzV-Lr-c0I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fny-Mb-ZoG"/>
+                            <constraint firstItem="fzV-Lr-c0I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zxn-kk-yOG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1DS-Bf-mkP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982.4427480916029" y="-6.3380281690140849"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="VxA-5K-e5i">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="D8x-op-M2U" customClass="LoginViewController" customModule="KakaoLoginAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7IS-b6-eqB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pj9-oL-fpQ">
+                                <rect key="frame" x="32" y="99" width="329" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBh-28-61l">
+                                <rect key="frame" x="157.66666666666666" y="408.66666666666669" width="78" height="35"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutBtnClicked:" destination="D8x-op-M2U" eventType="touchUpInside" id="4aq-Sx-8lX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cpB-Vd-3to">
+                                <rect key="frame" x="96.666666666666686" y="140" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="tNu-l1-bxX"/>
+                                    <constraint firstAttribute="width" constant="200" id="zAT-WM-MDK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2a-PT-Dzp">
+                                <rect key="frame" x="32" y="483.66666666666669" width="329" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="repeat.circle" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="fetchBtnClicked:" destination="D8x-op-M2U" eventType="touchUpInside" id="5K8-jt-4Th"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VN4-pj-pPJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cpB-Vd-3to" firstAttribute="centerX" secondItem="7IS-b6-eqB" secondAttribute="centerX" id="5gV-iw-f0X"/>
+                            <constraint firstItem="Pj9-oL-fpQ" firstAttribute="top" secondItem="VN4-pj-pPJ" secondAttribute="top" constant="40" id="7uh-oC-TcJ"/>
+                            <constraint firstItem="VN4-pj-pPJ" firstAttribute="trailing" secondItem="l2a-PT-Dzp" secondAttribute="trailing" constant="32" id="Qed-Rp-Pjf"/>
+                            <constraint firstItem="l2a-PT-Dzp" firstAttribute="top" secondItem="LBh-28-61l" secondAttribute="bottom" constant="40" id="ben-47-I9N"/>
+                            <constraint firstItem="cpB-Vd-3to" firstAttribute="top" secondItem="Pj9-oL-fpQ" secondAttribute="bottom" constant="20" id="fTk-Dd-mhC"/>
+                            <constraint firstItem="Pj9-oL-fpQ" firstAttribute="leading" secondItem="VN4-pj-pPJ" secondAttribute="leading" constant="32" id="kCJ-V5-RLp"/>
+                            <constraint firstItem="LBh-28-61l" firstAttribute="centerX" secondItem="7IS-b6-eqB" secondAttribute="centerX" id="kFL-RY-fRP"/>
+                            <constraint firstItem="VN4-pj-pPJ" firstAttribute="trailing" secondItem="Pj9-oL-fpQ" secondAttribute="trailing" constant="32" id="sAd-mk-hT7"/>
+                            <constraint firstItem="LBh-28-61l" firstAttribute="centerY" secondItem="7IS-b6-eqB" secondAttribute="centerY" id="tKx-Xf-b9N"/>
+                            <constraint firstItem="l2a-PT-Dzp" firstAttribute="leading" secondItem="VN4-pj-pPJ" secondAttribute="leading" constant="32" id="vU5-7w-fuV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImage" destination="cpB-Vd-3to" id="0lz-Rx-ADi"/>
+                        <outlet property="myName" destination="Pj9-oL-fpQ" id="bzC-iY-ijA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVe-Sx-Jjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2811.450381679389" y="-6.3380281690140849"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zYn-SB-oMv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sGx-ac-nnu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TiZ-uZ-AFU">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ye5-XJ-mdV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ox-bt-1F5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.7251908396945" y="-6.3380281690140849"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="repeat.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
